@@ -106,6 +106,9 @@ header {
 .accordion-button::after {
   filter: invert(1);
 }
+.accordion-button:not(.collapsed)::after {
+   transform: rotate(360deg);
+}
 .accordion-header {
   border-top: solid 1px #5a5d5f;
   border-bottom: solid 1px #494b4d;
@@ -177,7 +180,7 @@ header {
 
 .search-box {
   position: relative;
-  z-index: 2; /* Ensure search box is above the overlay */
+  /* z-index: 2;  */
   color: #fff; /* Adjust text color */
   padding: 20px; /* Adjust padding as needed */
 }
